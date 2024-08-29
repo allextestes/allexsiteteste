@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Site</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            position: relative;
+        }
+        #text {
+            font-size: 2rem;
+            padding: 1rem;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="text" onclick="moveAndChangeColor()">guaxi-gay</div>
+    </div>
+    
+    <script>
+        function moveAndChangeColor() {
+            const text = document.getElementById('text');
+            const container = document.getElementById('container');
+
+            // Toggle the position
+            if (text.style.transform === 'translateY(100px)') {
+                text.style.transform = 'translateY(0)';
+                text.style.color = '#000';
+            } else {
+                text.style.transform = 'translateY(100px)';
+                text.style.color = '#ff0000';
+            }
+        }
+    </script>
+</body>
+</html>
